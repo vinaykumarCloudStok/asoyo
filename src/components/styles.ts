@@ -148,7 +148,85 @@ button {
   align-items: center;
   gap: 12px;
 }
+/* ── Mobile Nav Toggle ── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  cursor: pointer;
+}
 
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 20px;
+  background: ${T.onSurface};
+  transition: all 0.3s;
+}
+
+/* Animate to X */
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile Menu ── */
+.mobile-menu {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid ${T.outlineVariant}30;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 16px;
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ${T.ease};
+}
+
+.mobile-menu.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-link {
+  font-size: 16px;
+  font-weight: 600;
+  color: ${T.onSurface};
+  text-decoration: none;
+}
+
+.mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .nav-actions {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}
 @media (max-width: 1024px) {
   .nav-links { gap: 20px; }
 }
