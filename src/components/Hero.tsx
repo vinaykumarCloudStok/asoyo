@@ -92,7 +92,7 @@ const ProductMockup: React.FC = () => (
 );
 
 export const Hero: React.FC = () => (
-  <Sec bg={T.surfaceLowest} py="130px 88px">
+  <Sec bg={T.surfaceLowest}>
     <div className="hero-grid">
       <div className="hero-left">
         <div className="hero-pill">

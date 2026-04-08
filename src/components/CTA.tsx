@@ -4,7 +4,7 @@ import { T } from "./tokens";
 
 
 export const CTA: React.FC = () => (
-  <Sec bg={T.inverseSurface} py="80px 80px">
+  <Sec bg={T.inverseSurface}>
     <div style={{ textAlign: "center" }}>
       <ChainBadge
         style={{
@@ -42,11 +42,11 @@ export const CTA: React.FC = () => (
         Join 500+ enterprises who have regained 12 hours of selling time per
         week.
       </p>
-      <div style={{ display: "flex", gap: 12, justifyContent: "center" }}>
+      <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
         <button className="btn-primary">Start your free trial</button>
         <button
           className="btn-secondary"
-          style={{ color: "#fff", borderColor: "rgba(255,255,255,0.2)" }}
+          style={{ color: "#fff", borderColor: "rgba(255,255,255,0.2)", background: "transparent" }}
         >
           Contact Sales
         </button>

@@ -11,11 +11,12 @@ export const Nav: React.FC<NavProps> = ({ scrolled }) => (
     className="nav-shell"
     style={{
       background: scrolled
-        ? "rgba(255,255,255,0.78)"
-        : "rgba(250,248,255,0.5)",
+        ? "rgba(255,255,255,0.85)"
+        : "transparent",
       borderBottom: scrolled
-        ? `1px solid ${T.outlineVariant}22`
+        ? `1px solid ${T.outlineVariant}30`
         : "1px solid transparent",
+      boxShadow: scrolled ? T.shadow : "none"
     }}
   >
     <div className="nav-inner">

@@ -19,7 +19,7 @@ export const Footer: React.FC = () => (
   <footer className="footer">
     <div className="footer-inner">
       <div className="footer-grid">
-        <div>
+        <div className="footer-brand-col">
           <div className="nav-brand" style={{ marginBottom: 12 }}>
             <div
               className="nav-logo-mark"
@@ -38,7 +38,7 @@ export const Footer: React.FC = () => (
         </div>
 
         {COLUMNS.map((col) => (
-          <div key={col.t}>
+          <div key={col.t} className="footer-col">
             <p className="footer-col-title">{col.t}</p>
             {col.l.map((link) => (
               <a key={link} href="#" className="footer-link">

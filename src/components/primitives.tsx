@@ -61,10 +61,10 @@ export const Sec: React.FC<SecProps> = ({
   id,
   bg = T.surfaceLowest,
   children,
-  py = "100px 100px",
+  py,
 }) => (
-  <section id={id} style={{ background: bg, padding: py }}>
-    <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 32px" }}>
+  <section id={id} style={{ background: bg }} className="sec-shell">
+    <div className="sec-inner" style={py ? { padding: py } : undefined}>
       {children}
     </div>
   </section>

@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Nav } from "./components/Nav";
-import { Hero } from "./components/Hero";
-import { Agents } from "./components/Agents";
-import { Chain } from "./components/Chain";
-import { Industry } from "./components/Industry";
-import { Compliance } from "./components/Compliance";
-import { CTA } from "./components/CTA";
-import { Footer } from "./components/Footer";
-import { globalStyles } from "./components/styles";
-
+import {
+  Nav,
+  Hero,
+  Agents,
+  Chain,
+  Industry,
+  Compliance,
+  CTA,
+  Footer,
+  globalStyles
+} from "./components";
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -23,14 +24,15 @@ const App: React.FC = () => {
 
   return (
     <div className="ascoyo-root">
-     
       <Nav scrolled={scrolled} />
-      <Hero />
-      <Agents />
-      <Chain />
-      <Industry />
-      <Compliance />
-      <CTA />
+      <main>
+        <Hero />
+        <Agents />
+        <Chain />
+        <Industry />
+        <Compliance />
+        <CTA />
+      </main>
       <Footer />
       <style>{globalStyles}</style>
     </div>
